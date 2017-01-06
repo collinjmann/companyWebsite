@@ -33,7 +33,7 @@ header
     min-height: 86vh;
     width: 100vw;
     background-color: #1a1a1a;
-    background-image: url('../img/greenDragon.png');
+    background-image: url('../images/greenDragon.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -165,7 +165,7 @@ main
 {
     width: 100vw;
     background-color: #ffffff;
-    background-image: url('../img/greenDragon.png');
+    background-image: url('../images/greenDragon.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -345,28 +345,28 @@ main > section:nth-of-type(2) > section:nth-of-type(2) > article, section:nth-of
 
 main > section:nth-of-type(2) > section:nth-of-type(2) > article:nth-of-type(1)
 {
-    background-image: url('../img/heatDetector.png');
+    background-image: url('../images/heatDetector.png');
     background-size: 100%;
     background-origin: border-box;
 }
 
 main > section:nth-of-type(2) > section:nth-of-type(2) > article:nth-of-type(2)
 {
-    background-image: url('../img/voltWasp.png');
+    background-image: url('../images/voltWasp.png');
     background-size: 100%;
     background-origin: border-box;
 }
 
 main > section:nth-of-type(2) > section:nth-of-type(2) > article:nth-of-type(3)
 {
-    background-image: url('../img/BacteriaCluster.png');
+    background-image: url('../images/BacteriaCluster.png');
     background-size: 100%;
     background-origin: border-box;
 }
 
 main > section:nth-of-type(2) > section:nth-of-type(2) > article:nth-of-type(4)
 {
-    background-image: url('../img/FlareBeetle.png');
+    background-image: url('../images/FlareBeetle.png');
     background-size: 100%;
     background-origin: border-box;
    
@@ -374,28 +374,28 @@ main > section:nth-of-type(2) > section:nth-of-type(2) > article:nth-of-type(4)
 
 main > section:nth-of-type(2) > section:nth-of-type(4) > article:nth-of-type(1)
 {
-    background-image: url('../img/bacteriaMites.png');
+    background-image: url('../images/bacteriaMites.png');
     background-size: 100%;
     background-origin: border-box;
 }
 
 main > section:nth-of-type(2) > section:nth-of-type(4) > article:nth-of-type(2)
 {
-    background-image: url('../img/character.png');
+    background-image: url('../images/character.png');
     background-size: 100%;
     background-origin: border-box;
 }
 
 main > section:nth-of-type(2) > section:nth-of-type(4) > article:nth-of-type(3)
 {
-    background-image: url('../img/fireGlider.png');
+    background-image: url('../images/fireGlider.png');
     background-size: 100% 100%;
     background-origin: border-box;
 }
 
 main > section:nth-of-type(2) > section:nth-of-type(4) > article:nth-of-type(4)
 {
-    background-image: url('../img/sandWorm.png');
+    background-image: url('../images/sandWorm.png');
     background-size: 100%;
     background-position: center;
     background-origin: border-box;
@@ -422,7 +422,7 @@ footer
 /*Transitions*/
 .triangle1
 {
-    background-image: linear-gradient(to top left, rgba(255,255,255,0.85),      rgba(255,255,255,0.85) 49.5%, rgba(26,26,26,0) 50%,rgba(26,26,26,0) 100%),  url('../img/greenDragon.png'), 
+    background-image: linear-gradient(to top left, rgba(255,255,255,0.85),      rgba(255,255,255,0.85) 49.5%, rgba(26,26,26,0) 50%,rgba(26,26,26,0) 100%),  url('../images/greenDragon.png'), 
                         linear-gradient(to top left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49.5%, rgba(26,26,26,1) 50%,rgba(26,26,26,1) 100%);
     background-attachment: scroll, fixed, scroll;
     background-size: auto, contain, auto;
