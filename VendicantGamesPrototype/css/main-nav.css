@@ -1,0 +1,72 @@
+/*Navigation Formating - Desktop*/
+
+nav
+{
+    line-height: 20px;
+    text-align: right;
+    height: 115px;
+    width: 100vw;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom left, rgba(255,255,255,0.85), rgba(255,255,255,0.85) 49.5%, rgba(26,26,26,0) 50%,rgba(26,26,26,0) 100%), url('../img/greenDragon.png'),
+                        linear-gradient(to bottom left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49.5%, rgba(26,26,26,1) 50%,rgba(26,26,26,1) 100%);
+    background-attachment: scroll, fixed, scroll;
+    background-size: 250vw 100%, contain, 250vw 100%;
+    background-position: center, right, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    width: 100vw;
+    align-self: flex-end !important;
+}
+
+nav:focus
+{
+    outline: none;
+}
+
+nav ul
+{
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    height: 100%;
+    line-height: 3rem;
+}
+
+nav ul li
+{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 0.8rem;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    display: inline-block;
+    padding: 0.15rem 3.5rem 0.15rem 3.5rem;
+}
+
+nav ul li:nth-of-type(1)
+{
+    border-top: 1px solid #ff0000;
+    border-bottom: 1px solid #ff0000;
+}
+
+nav ul li:hover
+{
+    background-color: rgba(255,255,255,0.6);
+}
+
+nav ul li a
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+nav ul li:nth-of-type(1) a
+{
+    color: #ff0000 !important;
+}
+
+
+
+nav figure
+{
+    display: none;
+}
