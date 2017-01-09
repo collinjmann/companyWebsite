@@ -28,6 +28,7 @@ nav > ul
     padding: 0rem 0rem 0rem 0rem;
     height: 100%;
     line-height: 3rem;
+    
 }
 
 nav > ul > li
@@ -35,6 +36,7 @@ nav > ul > li
     font-family: 'Open Sans';
     font-weight: 400;
     font-size: 0.8rem;
+    text-align: center;
     height: 30px;
     line-height: 30px;
     color: #ffffff;
@@ -55,10 +57,11 @@ nav > ul > li > ul
     line-height: 2rem;
     background-color: #ffffff;
     padding-left: 1rem;
-    padding: 1rem;
-    
+    padding-right: 1rem;
+    width: 125px;
+    transition: height 400ms ease-in-out;
     height: 0px;
-    display: none;
+    /*display: none;*/
     overflow: hidden !important;
     position: absolute;
     right: 0;
@@ -66,15 +69,14 @@ nav > ul > li > ul
 
 nav > ul > li:hover > ul
 {
-    transition: height 400ms ease-in-out;
-    height: 200px;
-    display: block;
+   
+    height: 150px;
+    
     
 }
 
 nav > ul > li > ul > li
 {
-    display: inline-block;
     overflow: hidden;
 }
 
