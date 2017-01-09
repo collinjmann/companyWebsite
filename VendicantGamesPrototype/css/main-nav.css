@@ -28,7 +28,6 @@ nav > ul
     padding: 0rem 0rem 0rem 0rem;
     height: 100%;
     line-height: 3rem;
-    
 }
 
 nav > ul > li
@@ -51,29 +50,49 @@ nav > ul > li:nth-of-type(1)
     border-bottom: 1px solid #ff0000;
 }
 
+nav > ul > li > div
+{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    background-color: #1a1a1a;
+    transform: rotate(45deg);
+    display: none;s
+}
+
+nav > ul > li:hover > div
+{
+    display: block;
+}
+
+
 
 nav > ul > li > ul
 {
     line-height: 2rem;
-    background-color: #ffffff;
+    background-color: #1a1a1a;
+    border-radius: 2px;
     padding-left: 1rem;
     padding-right: 1rem;
     width: 125px;
-    transition: height 400ms ease-in-out;
+    transition: height 0ms ease-in-out;
     height: 0px;
     /*display: none;*/
     overflow: hidden !important;
     position: absolute;
     right: 0;
+    z-index: 2;
+
 }
 
 nav > ul > li:hover > ul
 {
-   
     height: 150px;
-    
-    
+    border-left: 1px solid #00cc00;
+    border-right: 1px solid #00cc00;
+    border-bottom: 1px solid #00cc00;
 }
+
 
 nav > ul > li > ul > li
 {
@@ -81,9 +100,15 @@ nav > ul > li > ul > li
 }
 
 
-nav  ul  li  a
+nav > ul > li > a
 {
     color: #000000;
+    text-decoration: none;
+}
+
+nav > ul > li > ul > li > a
+{
+    color: #ffffff;
     text-decoration: none;
 }
 

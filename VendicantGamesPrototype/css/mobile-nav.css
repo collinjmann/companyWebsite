@@ -27,7 +27,7 @@ nav:focus > ul
     border-right: 2px solid #00cc00; 
 }
 
-nav ul
+nav > ul
 {
     background-color: #ffffff;
     box-sizing: border-box;
@@ -47,7 +47,7 @@ nav ul
 
 
 
-nav ul li
+nav > ul > li
 {
     font-family: 'Open Sans';
     font-weight: 400;
@@ -58,15 +58,29 @@ nav ul li
     margin-bottom: 0.75rem;
     width: 70%;
     list-style-type: none;
+    position: relative;
 }
 
-nav ul li a
+nav > ul > li > span
+{
+    position: absolute !important;
+    left: 0px;
+}
+
+nav > ul > li > ul
+{
+    display: none;
+    overflow: hidden;
+}
+
+nav > ul > li > a
 {
     color: #000000;
     text-decoration: none;
+    position: relative;
 }
 
-nav figure
+nav > figure
 {
     font-family: 'Open Sans';
     font-weight: 300;

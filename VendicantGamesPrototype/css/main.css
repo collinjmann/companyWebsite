@@ -440,6 +440,11 @@ footer
     width: 100vw;
 }
 
+.triangle3
+{
+    background-image: linear-gradient(to top left, rgba(255,255,255,0.85),      rgba(255,255,255,0.85) 49.5%, rgba(26,26,26,0) 50%,rgba(26,26,26,0) 100%)
+}
+
 /*Flexbox Formating*/
 .flex-container
 {
