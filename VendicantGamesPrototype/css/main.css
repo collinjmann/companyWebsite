@@ -23,6 +23,7 @@ body
     background-size: cover;
     background-position: right top;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     overflow-x: hidden;
    
 }
@@ -41,6 +42,7 @@ header
     background-size: cover;
     background-position: right top;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 header > div:nth-of-type(1)
@@ -124,6 +126,7 @@ main
     background-size: auto, cover, auto;
     background-position: initial, right top, initial;
     background-attachment: scroll, fixed, scroll;
+    background-repeat: no-repeat, no-repeat, no-repeat;
     height: 20vh;
     width: 100vw;
 }
@@ -134,6 +137,7 @@ main
     background-size: auto, cover, auto;
     background-position: initial, right top, initial;
     background-attachment: scroll, fixed, scroll;
+    background-repeat: no-repeat, no-repeat, no-repeat;
     height: 20vh;
     width: 100vw;
 }
