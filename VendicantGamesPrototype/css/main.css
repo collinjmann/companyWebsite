@@ -20,8 +20,8 @@ body
     padding: 0rem 0rem 0rem 0rem;
     font-size: 1em;
     background-image: url(../images/greenDragon.png);
-    background-size: cover;
-    background-position: right top;
+    background-size: contain;
+    background-position: right;
     background-attachment: fixed;
     background-repeat: no-repeat;
     overflow-x: hidden;
@@ -32,34 +32,34 @@ body
 header
 {
     font-family: 'Open Sans';
-    height: 80vh;
+    height: 70vh;
     width: 100vw;
     align-items: center;
-    flex-flow: column wrap;
     position: relative;
     background-color: #1a1a1a;
     background-image: url(../images/greenDragon.png);
-    background-size: cover;
-    background-position: right top;
+    background-size: contain;
+    background-position: right;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    justify-content: flex-start !important;
 }
 
 header > div:nth-of-type(1)
 {
-    width: 40%;
+    min-width: 50%;
     text-align: right;
 }
 
 header > div > span:nth-of-type(1)
 {
-    font-size: 4rem;
+    font-size: 5.2rem;
     color: #ffff00;
 }
 
 header > div > span:nth-of-type(2)
 {
-    font-size: 4rem;
+    font-size: 5.2rem;
     color: #ffffff;
 }
 
@@ -86,21 +86,27 @@ header > div:nth-of-type(2)
 main
 {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    
 }
 
-.section-1
+.section-white
 {
+    color: #000000;
     background-color: rgba(255,255,255,0.85);
     min-height: 60vh;
     width: 100vw;
+    align-items: center;
+    justify-content: space-around !important;
 }
 
-.section-2
+.section-grey
 {
+    color: #ffffff;
     background-color: #1a1a1a;
-    min-height: 70vh;
+    min-height: 100vh;
     width: 100vw;
+    justify-content: space-around !important;
 }
 
 .main-article
@@ -108,14 +114,64 @@ main
     font-family: 'Open Sans';
     font-size: 1rem;
     line-height: 2rem;
-    width: 40%;
+    width: 35%;
+    min-width: 700px;
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+    
 }
 
 .main-article > h1
 {
     font-family: 'Raleway';
-    font-size: 1.75rem;
+    font-size: 2.75rem;
+    font-weight: 200;
     text-align: center;
+}
+
+.box-container
+{
+    width: 35%;
+    justify-content: space-around !important;
+    min-width: calc(600px + 10.5rem);
+}
+
+.box
+{
+    font-family: 'Open Sans';
+    font-size: 0.8rem;
+    color: #ffffff;
+    height: 150px;
+    width: 200px;
+    background-color: #1a1a1a;
+    margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+
+@media screen and (max-width: 850px)
+{
+    .main-article
+    {
+        min-width: 200px;
+        width: 80%;
+    }
+    
+    .box-container
+    {
+        width: 80%;
+        min-width: 200px;
+    }
+}
+
+.box > img
+{
+    height: 100%;
+    width: 100%;
+}
+
+.box > p
+{
+    margin: 0.75rem 0.75rem 0.75rem 0.75rem;
 }
 
 
@@ -123,8 +179,8 @@ main
 .transition-1
 {
     background-image: linear-gradient(to top left, rgba(255,255,255,0.85), rgba(255,255,255,0.85) 49.5%, transparent 50%, transparent 100%), url(../images/greenDragon.png),  linear-gradient(to top left, #ffffff, #ffffff 49.5%, #1a1a1a 50%, #1a1a1a 100%);
-    background-size: auto, cover, auto;
-    background-position: initial, right top, initial;
+    background-size: auto, contain, auto;
+    background-position: center, right, center;
     background-attachment: scroll, fixed, scroll;
     background-repeat: no-repeat, no-repeat, no-repeat;
     height: 20vh;
@@ -134,12 +190,33 @@ main
 .transition-2
 {
     background-image: linear-gradient(to bottom right, rgba(255,255,255,0.85), rgba(255,255,255,0.85) 49.5%, #1a1a1a 50%, #1a1a1a 100%), url(../images/greenDragon.png),  linear-gradient(to bottom right, #ffffff, #ffffff 49.5%, #1a1a1a 50%, #1a1a1a 100%);
-    background-size: auto, cover, auto;
-    background-position: initial, right top, initial;
+    background-size: auto, contain, auto;
+    background-position: center, right, center;
     background-attachment: scroll, fixed, scroll;
     background-repeat: no-repeat, no-repeat, no-repeat;
     height: 20vh;
     width: 100vw;
+    align-self: flex-end;
+}
+
+/*Footer*/
+footer
+{
+    font-family: 'Open Sans';
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: center;
+    background-color: #1a1a1a;
+    height: 50px;
+    width: 100vw;
+    line-height: 50px;
+    
+}
+
+footer > a
+{
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /*Flexbox Layout*/
@@ -147,7 +224,7 @@ main
 {
     display: flex;
         flex-flow: row wrap;
-        justify-content: space-between;
+        justify-content: space-around;
     
 }
 
