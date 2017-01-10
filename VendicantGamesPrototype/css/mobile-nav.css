@@ -10,6 +10,7 @@ nav
     transition: margin-left 400ms ease-in-out 0ms;
     margin: 0rem 0rem 0rem 0rem;
 }
+
 nav:focus
 {
     outline: none;
@@ -24,33 +25,58 @@ nav > ul
     left: 0;
     transition: margin-left 400ms ease-in-out 0ms;
     margin: 0px 0px 0px 0px;
-    padding: 35% 0rem 0rem 0rem;
+    padding: 35vh 0rem 0rem 0rem;
     height: 100vh;
     transition: width 400ms ease-in-out;
     width: 0px;
     overflow: hidden;
+    background-color: #0d0d0d;
 }
 
-nav:focus > ul
+/*nav:focus > ul
 {
     background-color: #0d0d0d;
     width: 200px;
 }
+*/
 
 nav > ul > li
 {
     font-family: 'Open Sans';
+    color: #ffffff;
     font-size: 1rem;
     display: block;
-    width: 80%;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    width: 70%;
+    padding-left: 3rem;
+    position: relative;
+    overflow: visible !important;
+}
+
+nav > ul > li:focus
+{
+    outline: none;
+}
+
+nav > ul > li > span
+{
+    display: block;
+    position: absolute;
+    left: 30px;
 }
 
 
 nav > ul > li > ul
 {
-    display: none;
+    height: 0px;
+    overflow: hidden;
+    position: relative;
+    z-index: 200;
+}
+
+nav > ul > li > ul > li >  a
+{
+    text-decoration: none;
+    color: #ffffff;
 }
 
 nav > ul > li > a
