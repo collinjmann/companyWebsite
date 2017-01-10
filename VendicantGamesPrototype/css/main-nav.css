@@ -13,6 +13,11 @@ nav
     z-index: 100;
 }
 
+nav:focus
+{
+    outline: none;
+}
+
 nav > ul
 {
     font-family: 'Open Sans';
@@ -54,20 +59,44 @@ nav > ul > li:nth-of-type(1) > a
 
 nav > ul > li > ul
 {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+    background-color: #1a1a1a;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
     transition: height 0ms ease 0ms;
+    text-align: center;
     height: 0px;
     overflow: hidden;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    display: block;
+    left: calc(50% - 70px);
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 1rem 0rem 1rem;
+    width: 130px;
 }
 
 nav > ul > li:hover > ul
 {
     height: 150px;
+    border-left: 1px solid #00cc00;
+    border-right: 1px solid #00cc00;
+    border-bottom: 1px solid #00cc00;
 }
 
 nav > ul > li > ul > li
 {
     display: inline-block;
+    width: 85%;
+}
+
+nav > ul > li > ul > li > a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav > figure
+{
+    display: none;
 }
