@@ -29,6 +29,7 @@ nav > ul > li
     padding-right: 1.8rem;
     padding-top: 0.2rem;
     padding-bottom: 0.2rem;
+    position: relative;
     
 }
 
@@ -49,4 +50,24 @@ nav > ul > li:nth-of-type(1) > a
 {
     color: #ff0000;
     
+}
+
+nav > ul > li > ul
+{
+    transition: height 0ms ease 0ms;
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+nav > ul > li:hover > ul
+{
+    height: 150px;
+}
+
+nav > ul > li > ul > li
+{
+    display: inline-block;
 }
