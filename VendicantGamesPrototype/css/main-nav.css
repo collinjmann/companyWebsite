@@ -4,7 +4,7 @@ nav
     
     width: 100vw;
     height: 100px;
-    background-image: linear-gradient(to bottom left, rgba(255,255,255,0.85), rgba(255,255,255,0.85) 49.5%, transparent 50%, transparent 100%), url(../images/greenDragon.png),  linear-gradient(to bottom left, #ffffff, #ffffff 49.5%, #1a1a1a 50%, #1a1a1a 100%);
+    background-image: linear-gradient(to bottom left, rgba(255,255,255,0.85),   rgba(255,255,255,0.85) 49.5%, #1a1a1a 50%, #1a1a1a 100%), url(../images/greenDragon.png),  linear-gradient(to bottom left, #ffffff, #ffffff 49.5%, #1a1a1a 50%, #1a1a1a 100%);
     background-size: 200vw 100%, contain, 200vw 100%;
     background-position: center, right, center;
     background-attachment: scroll, fixed, scroll;
