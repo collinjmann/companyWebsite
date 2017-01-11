@@ -9,10 +9,6 @@ nav
     z-index: 10;
     transition: margin-left 400ms ease-in-out 0ms;
     margin: 0rem 0rem 0rem 0rem;
-}
-
-nav:focus
-{
     outline: none;
 }
 
@@ -33,12 +29,6 @@ nav > ul
     background-color: #0d0d0d;
 }
 
-/*nav:focus > ul
-{
-    background-color: #0d0d0d;
-    width: 200px;
-}
-*/
 
 nav > ul > li
 {
@@ -67,19 +57,23 @@ nav > ul > li > span
 
 nav > ul > li > ul
 {
+    transition: height 400ms ease-in-out 0ms;
     height: 0px;
     overflow: hidden;
     position: relative;
+    left: -40px;
     z-index: 200;
 }
 
-nav > ul > li > ul > li >  a
+
+
+nav > ul > li > ul > li
 {
-    text-decoration: none;
-    color: #ffffff;
+    font-size: 0.8rem;
+    display: block;
 }
 
-nav > ul > li > a
+nav  ul  li a
 {
     text-decoration: none;
     color: #ffffff;
