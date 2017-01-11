@@ -7,8 +7,8 @@ nav
     height: 115px;
     width: 100vw;
     box-sizing: border-box;
-    background-image: linear-gradient(to bottom left, rgba(255,255,255,0.85), rgba(255,255,255,0.85) 49.5%, rgba(26,26,26,0) 50%,rgba(26,26,26,0) 100%), url('../img/greenDragon.png'),
-                        linear-gradient(to bottom left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49.5%, rgba(26,26,26,1) 50%,rgba(26,26,26,1) 100%);
+    background-image: linear-gradient(to bottom left, rgba(255,255,255,0.85), rgba(255,255,255,0.85) 49.5%, rgba(26,26,26,0) 50%,rgba(26,26,26,0) 100%), url('../images/greenDragon.png'),
+                      linear-gradient(to bottom left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49.5%, rgba(26,26,26,1) 50%,rgba(26,26,26,1) 100%);
     background-attachment: scroll, fixed, scroll;
     background-size: 250vw 100%, contain, 250vw 100%;
     background-position: center, right, center;

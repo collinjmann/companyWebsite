@@ -1,0 +1,480 @@
+/***************
+Style Guide
+
+Font:
+    Body: Open Sans
+    Headers: Raleway
+Color:
+    Green: #00cc00
+    Yellow: #ffff00
+    Dark Grey: #1a1a1a
+****************/
+
+/*Font Import*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
+
+/*Reset*/
+*
+{
+	padding:0px;
+	margin:0px;
+}
+body
+{
+    font-size: 1em;
+    transition: margin 400ms ease-in-out 0ms;
+	font-family:'Open Sans';
+	overflow-x: hidden;
+}
+
+/*Header Formating*/
+header
+{
+    font-weight: 300;
+    min-height: 86vh;
+    width: 100vw;
+    background-color: #1a1a1a;
+    background-image: url('../images/greenDragon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    /*border-top: 1px solid #00cc00;
+    border-bottom: 1px solid #1aa3ff;*/
+    align-items: center;
+}
+
+/*Tagline and company name*/
+header  > div:first-of-type
+{
+    text-align: right;
+    height: 25vh;
+    width: 100vw;
+    padding: 1.5rem;
+    justify-content: flex-start;
+    align-self: flex-end;
+    word-wrap: break-word;
+}
+
+header  div:first-of-type  > div:first-of-type
+{
+    padding-left: 4rem;
+    padding-right: 4rem;
+    word-wrap: initial;
+}
+
+@media screen and (max-width: 550px)
+{
+    header  div:first-of-type
+	{
+        justify-content: flex-start;
+        align-self: center;
+        text-align: center;
+        padding: 0px;
+    }
+	header div div
+	{
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+		align-self:center;
+    }
+	header div div span
+        {
+        font-size: 3.5rem !important;
+    }
+    header div div span:nth-of-type(3)
+        {
+        font-size: 2rem !important;
+    }
+}
+
+/*Transition*/
+header > div:nth-of-type(2)
+{
+    width: 100%;
+}
+
+/*@media screen and (max-width: 500px)
+{
+	header > div:nth-of-type(1) > div:nth-of-type(1)
+	{
+		padding-left: 0rem;
+		padding-right: 0rem;
+	}
+}*/
+
+/*Arrow*/
+header > div:nth-of-type(1) > div:nth-of-type(2)
+{
+    margin-top: 2rem;
+    width: 100vw;
+   
+    
+}
+
+header > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1)
+{
+    height: 40px;
+    width: 40px;
+    border-left: 2px solid #ffff00;
+    border-bottom: 2px solid #ffff00;
+    transform: rotate(-45deg);
+    margin: 5rem auto;
+}
+
+
+
+header > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)
+{
+    font-size: 5rem;
+    color: #ffff00;
+    display: inline-block;
+    z-index: 100;
+    font-weight: 400;
+}
+
+
+
+
+header > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(2)
+{
+    font-size: 5rem;
+    color: #ffffff;
+    display: inline-block;
+    z-index: 100;
+    font-weight: 400;
+}
+
+
+header > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(3)
+{
+    font-size: 3rem;
+    color: #ffffff;
+    z-index: 100;
+    font-weight: 400;
+    word-wrap: normal !important;
+}
+
+@media screen and (max-width: 550px)
+{
+    
+}
+
+
+
+/*Main Content Formating*/
+
+main
+{
+    width: 100vw;
+    background-color: #ffffff;
+    background-image: url('../images/greenDragon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right;
+    
+}
+
+/*First Section*/
+
+main > section:first-of-type
+{
+    width: 100%;
+    min-height: 70vh;
+    align-items: center;
+    background-color: rgba(255,255,255,0.85);
+    padding: 3rem;
+}
+
+@media screen and (max-width: 550px)
+{
+    main > section:first-of-type
+        {
+        padding: 0.5rem;
+    }
+}
+
+
+
+main > section:nth-of-type(1) > section:nth-of-type(1)
+{
+    width: 45%;
+    min-width: 540px;
+    margin: 0 auto;
+    justify-content: space-around !important;
+}
+
+@media screen and (max-width: 550px)
+{
+    main > section:nth-of-type(1) > section:nth-of-type(1)
+    {
+        min-width: 300px !important;
+
+    }
+}
+
+/*Section 1 Main Content*/
+main > section:nth-of-type(1) >section:nth-of-type(2)
+{
+    width: 45%;
+    min-width: 250px;
+    margin: 0 auto;
+}
+
+
+main > section:nth-of-type(1) > section:nth-of-type(1) > article
+{
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 1.25rem;
+    background-color: #1a1a1a;   
+    width: 30%;
+    min-width: 200px;
+    height: 175px;
+    margin: 2rem;
+    align-items: center;
+}
+
+main > section:nth-of-type(1) > section:nth-of-type(1) > article:nth-of-type(1), 
+main > section:nth-of-type(1) > section:nth-of-type(1) > article:nth-of-type(4)
+{
+     /*border: 2px solid #00cc00;*/
+}
+
+main > section:nth-of-type(1) > section:nth-of-type(1) > article:nth-of-type(2),
+main > section:nth-of-type(1) > section:nth-of-type(1) > article:nth-of-type(3)
+{
+    /*border: 2px solid #ffff00;*/
+}
+
+main > section:nth-of-type(1) >section:nth-of-type(1) > article > p
+{
+    width: 85%;
+    margin: 0 auto;
+}
+
+main > section:nth-of-type(1) > section:nth-of-type(2) > article > h1, main > section:nth-of-type(2) > section:nth-of-type(odd) > article >h1
+{
+    font-weight: 300;
+    font-size: 2rem;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(odd) > article >h1
+{
+    color: #ffffff;
+}
+
+main > section:nth-of-type(1) > section:nth-of-type(2) > article > p
+{
+    color: #1a1a1a;
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+/*Second Section*/
+
+main > section:nth-of-type(2)
+{
+    background-color: #1a1a1a;
+    width: 100%;
+    padding: 3rem;
+    
+}
+
+@media screen and (max-width: 500px)
+{
+    main > section:nth-of-type(2)
+    {
+        padding: 0.5rem !important;
+    }
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(odd)
+{
+    width: 45%;
+    min-width: 250px;
+    margin: 0 auto;
+       
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(odd) > article > p
+{
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+main > section:nth-of-type(2) >section:nth-of-type(even)
+{
+    width: 45%;
+    min-width: 540px;
+    margin: 0 auto;
+    justify-content: space-around !important;
+   
+}
+
+@media screen and (max-width: 550px)
+{
+    main > section:nth-of-type(2) >section:nth-of-type(even)
+    {
+        min-width: 300px !important;
+    }
+}
+
+
+main > section:nth-of-type(2) > section:nth-of-type(2) > article, section:nth-of-type(4) >article
+{
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 1.25rem;
+    background-color: #262626;
+    width: 30%;
+    min-width: 200px;
+    height: 150px;
+    margin: 2rem;
+    align-items: center;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(2) > article:nth-of-type(1)
+{
+    background-image: url('../images/heatDetector.png');
+    background-size: 100%;
+    background-origin: border-box;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(2) > article:nth-of-type(2)
+{
+    background-image: url('../images/voltWasp.png');
+    background-size: 100%;
+    background-origin: border-box;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(2) > article:nth-of-type(3)
+{
+    background-image: url('../images/BacteriaCluster.png');
+    background-size: 100%;
+    background-origin: border-box;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(2) > article:nth-of-type(4)
+{
+    background-image: url('../images/FlareBeetle.png');
+    background-size: 100%;
+    background-origin: border-box;
+   
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(4) > article:nth-of-type(1)
+{
+    background-image: url('../images/bacteriaMites.png');
+    background-size: 100%;
+    background-origin: border-box;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(4) > article:nth-of-type(2)
+{
+    background-image: url('../images/character.png');
+    background-size: 100%;
+    background-origin: border-box;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(4) > article:nth-of-type(3)
+{
+    background-image: url('../images/fireGlider.png');
+    background-size: 100% 100%;
+    background-origin: border-box;
+}
+
+main > section:nth-of-type(2) > section:nth-of-type(4) > article:nth-of-type(4)
+{
+    background-image: url('../images/sandWorm.png');
+    background-size: 100%;
+    background-position: center;
+    background-origin: border-box;
+}
+
+span
+{
+    word-wrap: normal !important;
+}
+
+/*Footer Formating*/
+footer
+{
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    width: 100vw;
+}
+
+/*Transitions*/
+.triangle1
+{
+    background-image: linear-gradient(to top left, rgba(255,255,255,0.85),      rgba(255,255,255,0.85) 49.5%, rgba(26,26,26,0) 50%,rgba(26,26,26,0) 100%),  url('../images/greenDragon.png'), 
+                        linear-gradient(to top left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 49.5%, rgba(26,26,26,1) 50%,rgba(26,26,26,1) 100%);
+    background-attachment: scroll, fixed, scroll;
+    background-size: auto, contain, auto;
+    background-position: center, right, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    height: 20vh;
+    width: 100vw;
+    align-self: flex-end !important;
+}
+
+.triangle2
+{
+    background-image: linear-gradient(to bottom right, rgba(255,255,255,0.85), rgba(255,255,255, 0.85) 49.5%, #1a1a1a 50%, #1a1a1a 100%);
+    height: 20vh;
+    width: 100vw;
+}
+
+/*Flexbox Formating*/
+.flex-container
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    white-space: normal;
+}
+
+.alt-flex-container
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.flex-item-1
+{
+    order: 1;
+}
+
+.flex-item-2
+{
+    order: 2;
+}
+
+.flex-item-3
+{
+    order: 3;
+}
+
+.flex-item-4
+{
+    order: 4;
+}
+
+.flex-item-5
+{
+    order: 5;
+}
