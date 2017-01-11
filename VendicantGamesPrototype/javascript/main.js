@@ -42,7 +42,7 @@ function init() {
         document.getElementsByTagName('body')[0].style.marginLeft = "0px";
         nav.style.marginLeft = "0px";
         document.getElementsByTagName("figure")[0].style.marginLeft = "0px";
-        document.getElementsByTagName('ul')[0].width = "0px";
+        document.getElementsByTagName('ul')[0].style.width = "0px";
     });
 }
 
