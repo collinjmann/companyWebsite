@@ -94,9 +94,9 @@ nav > ul > li > ul
 nav > ul > li:hover > ul
 {
     height: 110px !important;
-    border-left: 1px solid #00cc00;
+    /*border-left: 1px solid #00cc00;
     border-right: 1px solid #00cc00;
-    border-bottom: 1px solid #00cc00;
+    border-bottom: 1px solid #00cc00;*/
 }
 
 nav > ul > li > span

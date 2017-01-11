@@ -39,7 +39,7 @@ function init() {
     
     dropdownContainer.addEventListener('focus', function() {
         if(width < 1050 && dropdownHasFocus == false) {
-                dropdown.style.height = '170px';
+                dropdown.style.height = '125px';
                 dropdownContainer.getElementsByTagName('span')[0].style.visibility = "visible";
                 dropdownContainer.getElementsByTagName('span')[1].style.visibility = "hidden";
                 dropdownHasFocus = true;
