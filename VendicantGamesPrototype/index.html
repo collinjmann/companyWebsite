@@ -1,320 +1,255 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-		<title></title>
-		<meta name="keywords" content="" />
-		<meta name="description" content="" />
-		<meta name="author" content="Mann" />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<link rel="stylesheet" type="text/css" href="css/phone.css" media="screen and (max-width:1048px)" />
-		<style>
-			/*General*/
-			body
-			{
-				background-image:url("images/greendragon.png");
-				background-size:contain;
-				background-repeat:no-repeat;
-				background-attachment:fixed;
-				background-position:top right;
-			}
-			/*header*/
-			header
-			{
-				background-color:#1a1a1a;
-				min-height:70vh;
-				display:flex;
-				background-image:url("images/greendragon.png");
-				background-size:contain;
-				background-repeat:no-repeat;
-				background-attachment:fixed;
-				background-position:top right;
-			}
-			header div
-			{
-				text-align:right;
-				margin-left:60px;
-				align-self:center;
-			}
-			header div h1, header div h3
-			{
-				color:#ffffff;
-				font-family:'Raleway';
-			}
-			header div h1
-			{
-				font-size:5rem;
-			}
-			header div h3
-			{
-				font-size:3rem;
-			}
-			header div h1 span
-			{
-				color:#ffff00;
-			}
-			/*transitions*/
-			main > section:nth-of-type(odd)
-			{
-				background-color:rgba(255, 255, 255, 0.8);
-			}
-			main > section:nth-of-type(even)
-			{
-				background-color:#1a1a1a;
-			}
-			main div.transition:first-of-type
-			{
-				background-image: linear-gradient(to top left, rgba(255, 255, 255, 0.8) 49.5%, transparent 50%),
-					url("images/greendragon.png"),
-					linear-gradient(to top left, #ffffff 49.5%, #1a1a1a 50%);
-				background-attachment:scroll, fixed, scroll;
-				background-position:top right;
-				background-size:auto, contain, auto;
-				background-repeat:no-repeat;
-			}
-			main div.transition:nth-of-type(2)
-			{
-				background-image: linear-gradient(to top left, #1a1a1a 49.5%, rgba(255, 255, 255, 0.8) 50%),
-					url("images/greendragon.png"),
-					linear-gradient(to top left, #1a1a1a 49.5%, #ffffff 50%);
-				background-attachment:scroll, fixed, scroll;
-				background-position:top right;
-				background-size:auto, contain, auto;
-				background-repeat:no-repeat;
-			}
-			/*section formating*/
-			section:first-of-type
-			{
-				min-height:60vh;
-				align-items:center;
-			}
-			#values
-			{
-				width:50vw;
-				min-width:500px;
-			}
-			#mission
-			{
-				width:40vw;
-				min-width:250px;
-			}
-			#mission h3, #game h3
-			{
-				text-align:center;
-				margin-bottom:10px;
-				font-size:2em;
-				font-weight:normal;
-			}
-			section article.values
-			{
-				background-color:#1a1a1a;
-				color:#ffffff;
-				flex-basis:30%;
-				min-width:180px;
-				padding:20px;
-				margin:10px;
-			}
-			#game
-			{
-				color:#ffffff;
-				justify-content:center;
-			}
-			#game section
-			{
-				display:flex;
-				flex-wrap:wrap;
-			}
-			#game section article:first-of-type
-			{
-				width:40%;
-			}
-			#game section article:last-of-type
-			{
-				display:flex;
-				flex-wrap:wrap;
-				justify-content:space-between;
-				align-items:center;
-				width:500px;
-			}
-			#game section article img
-			{
-				width:30%;
-				min-width:200px;
-				margin:10px;
-			}
-			@media screen and (max-width:830px)
-			{
-				header
-				{
-					justify-content:center;
-				}
-				header div
-				{
-					margin-left:0px;
-				}
-				header h1
-				{
-					font-size:3em !important;
-				}
-				header h3
-				{
-					font-size:2em !important;
-				}
-			}
-			@media screen and (max-width:480px)
-			{
-				header h1
-				{
-					font-size:10vw !important;
-				}
-				header h3
-				{
-					font-size:5vw !important;
-				}
-				article.values, #mission, 
-				{
-					flex-basis:80vw !important;
-				}
-			}
-		</style>
-	</head>
-	
-	<body>		
-		<nav>
-			<div id="hamburg">
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-			
-			<div id="menu">Menu</div>
-			
-			<ul>
-				<li><a href="index.html#game">New Releases</a></li>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="games.html">Games</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			<div class="transition"></div>
-		</nav>
-		
-		<header>
-			<div>
-				<h1><span>...Always</span>Progressing</h1>
-				<h3>Vendicant Games</h3>
-			</div>
-		</header>
-		
-		<main>
-			<div class="transition"><div class="tdragon"></div></div>
-			
-			<section>
-				<section id="values">
-					<article class="values">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nam consequat vestibulum euismod. Curabitur efficitur erat 
-							vitae tellus tincidunt, id dapibus leo posuere.
-						</p>
-					</article>
-					
-					<article class="values">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nam consequat vestibulum euismod. Curabitur efficitur erat 
-							vitae tellus tincidunt, id dapibus leo posuere.
-						</p>
-					</article>
-					
-					<article class="values">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nam consequat vestibulum euismod. Curabitur efficitur erat 
-							vitae tellus tincidunt, id dapibus leo posuere.
-						</p>
-					</article>
-					
-					<article class="values">
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Nam consequat vestibulum euismod. Curabitur efficitur erat 
-							vitae tellus tincidunt, id dapibus leo posuere.
-						</p>
-					</article>
-				</section>
-				
-				<article id="mission">
-					<h3>Lorem Ipsum</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-						Nam consequat vestibulum euismod. Curabitur efficitur erat vitae tellus tincidunt, 
-						id dapibus leo posuere. Nam nisi ex, eleifend id maximus vel, feugiat id odio. 
-						Praesent ac dui a neque pharetra posuere. Nulla in eros vitae dolor facilisis laoreet. 
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce molestie id tortor at mattis.
-						Integer quis odio ac felis dignissim tempor. Nulla est mauris, cursus eget consequat at, 
-						sollicitudin quis nulla. Mauris non ex faucibus, elementum orci et, ullamcorper justo. 
-						Aenean urna nibh, consectetur sit amet varius quis, varius at felis.
-					</p>
-				</article>
-			</section>
-			
-			<div class="transition"></div>
-			<div class="tdragon"></div>
-			
-			<section id="game">
-				<section>
-					<article>
-						<h3>Lorem Ipsum</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Sed maximus felis vitae gravida aliquam. Duis efficitur velit porttitor, dictum felis in, hendrerit orci. 
-							Ut posuere, libero nec hendrerit posuere, ligula metus tristique lacus,
-							vitae condimentum neque lorem non nisi. 
-							Ut eget tempus tortor. Donec sagittis mattis massa, non sollicitudin 
-							magna feugiat eget. 
-							Duis quam risus, ullamcorper et egestas quis, auctor quis sapien. 
-							Duis quam sem, ullamcorper ut quam in, laoreet pulvinar ante. ut quam 
-							in, laoreet pulvinar ante.
-						</p>
-					</article>
-					
-					<article>
-						<img alt="snapshot" src="images/heatdetector.png" />
-						<img alt="snapshot" src="images/voltwasp.png" />
-						<img alt="snapshot" src="images/bacteriacluster.png" />
-						<img alt="snapshot" src="images/flarebeetle.png" />
-					</article>
-				</section>
-				
-				<section>
-					<article>
-						<h3>Lorem Ipsum</h3>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-							Sed maximus felis vitae gravida aliquam. Duis efficitur velit porttitor, dictum felis in, hendrerit orci. 
-							Ut posuere, libero nec hendrerit posuere, ligula metus tristique lacus, vitae condimentum neque lorem non nisi. 
-							Ut eget tempus tortor. Donec sagittis mattis massa, non sollicitudin magna feugiat eget. 
-							Duis quam risus, ullamcorper et egestas quis, auctor quis sapien. 
-							Duis quam sem, ullamcorper ut quam in, laoreet pulvinar ante. ut quam in, laoreet pulvinar ante.
-						</p>
-					</article>
-					
-					<article>
-						<img alt="snapshot" src="images/bacteriacluster.png" />
-						<img alt="snapshot" src="images/character.png" />
-						<img alt="snapshot" src="images/fireglider.png" />
-						<img alt="snapshot" src="images/sandworm.png" />
-					</article>
-				</section>
-			</section>
-		</main>
-		
-		<footer>
-			&copy; Copyright 2017 Vendicant Games | Contact Webmaster: someone@example.com
-		</footer>
-	</body>
+    <head>
+        <meta charset = "utf-8" />
+        <meta name = "author" content = "" />
+        <meta name = "description" content ="" />
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <link rel = "stylesheet" type = "text/css" href = "css/main.css" />
+        <link rel = "stylesheet" media = "screen and (min-width: 950px)" type = "text/css"  href = "css/main-nav.css" />
+        <link rel = "stylesheet" media = "screen and (max-width: 949px)" type = "text/css"  href = "css/mobile-nav.css" />
+        <script src = "javascript/main.js"></script>
+        <title>Vendiant Games</title>
+    </head>
+    
+    <body class = "flex-container">
+        <nav tabindex = "1">
+            <figure>
+                <div></div>
+                <div></div>
+                <div></div>
+                Menu
+            </figure>
+            <ul>
+                <li><a href = "#newReleases">New Releases</a></li>
+                <li><a href = "index.html">Home</a></li>
+                <li tabindex = "2" id = "dropdown-container"><span>-</span><span>+</span>About
+                    <div></div>
+                    <ul id = "dropdown">
+                        <li><a href = "template.html">Company</a></li>
+                        <li><a href = "template.html">Web Developers</a></li>
+                        <li><a href = "template.html">Game Developers</a></li>
+                        <li><a href = "template.html">Employment</a></li>
+                    </ul>
+                </li>
+                <li><a href = "template.html">Games</a></li>
+                <li><a href = "template.html">FAQs</a></li>
+            </ul>
+        </nav>
+        
+        <header class = "flex-container">
+            <div>
+                <span>...Always</span>
+                <span>Progressing</span>
+                <br/>
+                <span>Vendicant Games</span>
+            </div>
+            
+            <div></div>
+            
+        </header>
+        
+        <!--Transition-->
+        <div class = "transition-1"></div>
+        
+        <!--Main Section-->
+        <main class = "flex-container">
+            
+            <!--First Section-->
+            <section  class = "flex-container section-white">
+                <section class  ="flex-container box-container">
+                    <article class = "box">
+                        <p>
+                           We value people. We value culture. We value the family. When we are inclusive, we embrace the whole person and enable individual participation that promotes the value of the individual.
+                        </p>
+                        
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "images/fireGlider.png" alt = "Fire Glider" />
+                    </article>
+                       
+                    
+                    <article class = "box">
+                        <p>
+                            By embracing quality standards, processes, and techniques, we demonstrate continuous improvement of our products for the benefit our consumers. Nothing less than 100% is satisfactory.
+                        </p>
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "images/sandWorm.png" alt = "Sand Worm" />
+                    </article>
+                    
+                    <article class = "box">
+                        <p>
+                            We want to take care of our portion of our space on this planet. By embracing green initiatives, we inspire each other to seek new ways to recycle and be better consumers of our resources.
+
+                        </p>
+                    
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "images/bacteriaMites.png" alt = "Fire Glider" />
+                    </article>
+                </section>
+                
+                 <section class = "main-article">
+                    <h1>Our Mission</h1>
+                    <article>
+                        <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, a ultrices tortor. Nullam hendrerit, dui in bibendum ultricies, lorem augue commodo risus, non varius ex dui ut odio. Etiam ut scelerisque magna, ut vulputate elit. Duis fermentum cursus elit, bibendum mattis neque vulputate nec. Praesent iaculis, purus non blandit hendrerit, nisl diam feugiat lacus, bibendum ornare lorem odio et turpis. Cras in orci ornare, mollis tortor eu, pulvinar arcu.--> 
+                        
+                        At Vendicant Games, we seek to create innovative, casual games that compete in the indie development world. Through the use of digital marketing, we strive to establish and build a strong and unique brand. In order to be responsible citizens both corporate, locally and regionally, we place high value on people development and recycling.
+
+                    </article>
+                </section>
+            </section>
+            <!--Transition 2-->
+            <div class = "transition-2"></div>
+            
+            <!--Second Section-->
+            <section class = "flex-container section-grey">
+                <section class = "main-article">
+                    <h1>Lorem Ipsum</h1>
+                    <article>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, a ultrices tortor. Nullam hendrerit, dui in bibendum ultricies, lorem augue commodo risus, non varius ex dui ut odio. Etiam ut scelerisque magna, ut vulputate elit. Duis fermentum cursus elit, bibendum mattis neque vulputate nec. Praesent iaculis, purus non blandit hendrerit, nisl diam feugiat lacus, bibendum ornare lorem odio et turpis. Cras in orci ornare, mollis tortor eu, pulvinar arcu. Pellentesque non velit enim. Donec aliquet, odio eget pretium ultrices, nisi nisl eleifend lacus, id convallis felis lorem ut lectus. Vestibulum quam mauris, tincidunt ac sodales nec, tempor non dolor.
+                    </article>
+                </section>
+                
+                <section class = "flex-container box-container">
+                    <article class = "box">
+                        <img src = "../images/fireGlider.png" alt = "Fire Glider" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/sandWorm.png" alt = "Sand Worm" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/voltWasp.png" alt = "Volt Wasp" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/heatDetector.png" alt = "Heat Detector" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/flareBeetle.png" alt = "Flare Beetle" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/character.png" alt = "Female Character" />
+                    </article>
+                
+                </section>
+                
+                <section class = "main-article">
+                    <h1>Lorem Ipsum</h1>
+                
+                    <article>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, a ultrices tortor. Nullam hendrerit, dui in bibendum ultricies, lorem augue commodo risus, non varius ex dui ut odio. Etiam ut scelerisque magna, ut vulputate elit. Duis fermentum cursus elit, bibendum mattis neque vulputate nec. Praesent iaculis, purus non blandit hendrerit, nisl diam feugiat lacus, bibendum ornare lorem odio et turpis. Cras in orci ornare, mollis tortor eu, pulvinar arcu. 
+                    </article>
+                </section>
+                
+                <section class = "flex-container box-container">
+                    <article class = "box">
+                        <img src = "../images/bacteriaCluster.png" alt = "Bacteria Cluster" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/bacteriaMites.png" alt = "Bacteria Mites" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/fireGlider.png" alt = "Fire Glider" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/sandWorm.png" alt = "Sand Worm" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/voltWasp.png" alt = "Volt Wasp" />
+                    </article>
+                    
+                    <article class = "box">
+                        <img src = "../images/heatDetector.png" alt = "Heat Detector" />
+                    </article>
+                
+                </section>
+            
+            </section>
+        </main>
+        
+        <footer>
+        &copy; Copyright 2017 Vendicant Games | Contact Webmaster: <a href = "">someone@example.com</a>
+        </footer>
+    
+    </body>
+    
 </html>
+
+<style>
+    
+header
+{
+    font-family: 'Open Sans';
+    min-height: 70vh;
+    width: 100vw;
+    position: relative;
+    background-color: #1a1a1a;
+    background-image: url(../images/greenDragon.png);
+    background-size: contain;
+    background-position: right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    justify-content: flex-start !important;
+}
+
+header > div:nth-of-type(1)
+{
+    min-width: 50%;
+    text-align: right;
+    align-self: flex-end;
+}
+
+header > div > span:nth-of-type(1)
+{
+    font-size: 5.2rem;
+    color: #ffff00;
+}
+
+header > div > span:nth-of-type(2)
+{
+    font-size: 5.2rem;
+    color: #ffffff;
+}
+
+header > div > span:nth-of-type(3)
+{
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+header > div:nth-of-type(2)
+{
+    height: 40px;
+    width: 40px;
+    margin: auto calc(50% - 20px);
+    border-left: 2px solid #ffff00;
+    border-bottom: 2px solid #ffff00;
+    /*position: absolute;*/
+    left: calc(50% - 20px);
+    top: 70%;
+    transform: rotate(-45deg)
+}
+    
+@media screen and (min-width: 950px)
+{
+    nav
+    {
+        background-image: linear-gradient(to bottom left, rgba(255,255,255,0.85), rgba(255,255,255,0.85) 49.5%, transparent 50%, transparent 100%), url(../images/greenDragon.png),  linear-gradient(to bottom left, #ffffff, #ffffff 49.5%, #1a1a1a 50%, #1a1a1a 100%);
+    }
+}
+    
+</style>

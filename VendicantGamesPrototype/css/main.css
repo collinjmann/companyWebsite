@@ -1,101 +1,174 @@
-/*Housekeeping*/
+/***************
+Style Guide
+
+Font:
+    Body: Open Sans
+    Headers: Raleway
+Color:
+    Green: #00cc00
+    Yellow: #ffff00
+    Dark Grey: #1a1a1a
+    Black: #0d0d0d
+****************/
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400');
 
-* 
-{
-	padding:0px;
-	margin:0px;
-	overflow-x:hidden;
-}
+/*Body*/
 body
 {
-	font-family:'Open Sans', Verdana, sans-serif;
-	font-size:1em;
+    transition: margin-left 400ms ease-in-out 0ms;
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    font-size: 1em;
+    background-image: url(../images/greenDragon.png);
+    background-size: contain;
+    background-position: right;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+	font-family:"Open Sans";
 }
-/*transition*/
-div.transition:nth-of-type(even)
+
+/*Main Content*/
+main
 {
-	background:linear-gradient(to top left, #ffffff 49.5%, #1a1a1a 50%);
-	width:100vw;
-	height:15vh;
+    width: 100vw; 
 }
-div.transition:nth-of-type(odd)
+
+.section-white
 {
-	background:linear-gradient(to top left, #1a1a1a 49.5%, #ffffff 50%);
-	width:100vw;
-	height:15vh;
+    color: #000000;
+    background-color: rgba(255,255,255,0.85);
+    min-height: 70vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around !important;
 }
-/*Navigation for PC*/
-#hamburg, #menu
+
+.section-grey
 {
-	display:none;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    width: 100vw;
+    justify-content: space-around !important;
 }
-nav ul
+
+.main-article
 {
-	display:flex;
-	list-style:none;
-	width:100%;
-	padding-top:6px;
-	background-color:#ffffff;
-	justify-content:flex-end;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+    line-height: 2rem;
+    width: 35%;
+    min-width: 700px;
+    margin-left: 1.75rem;
+    margin-right: 1.75rem;
+    
 }
-nav ul li a
+
+h1
 {
-	display:block;
-	margin-right:30px;
-	margin-left:30px;
-	padding-left:30px;
-	padding-right:30px;
-	padding-top:8px;
-	padding-bottom:8px;
-	font-size:0.8rem;
-	color:#000000;
-	text-decoration:none;
-	
+    font-family: 'Raleway';
+    font-size: 2.75rem;
+    font-weight: 200;
+    text-align: center;
 }
-nav ul li:first-of-type 
+
+.box-container
 {
-	border-top:1px solid #ff0000;
-	border-bottom:1px solid #ff0000;
+    width: 35%;
+    justify-content: space-around !important;
+    min-width: calc(600px + 10.5rem);
 }
-nav ul li:first-of-type a
+
+.box
 {
-	color:#ff0000;
+    font-family: 'Open Sans';
+    font-size: 0.8rem;
+    color: #ffffff;
+    height: 150px;
+    width: 200px;
+    background-color: #1a1a1a;
+    margin: 1.5rem 1.5rem 1.5rem 1.5rem;
 }
-nav div.transition
+
+
+@media screen and (max-width: 850px)
 {
-	background:linear-gradient(to top right, #1a1a1a, 49.5%, #ffffff 50%) !important;
-	height:3vh !important;
+    .main-article
+    {
+        min-width: 200px;
+        width: 80%;
+    }
+    
+    .box-container
+    {
+        width: 80%;
+        min-width: 200px;
+    }
 }
-/*Section Code*/
-main > section:nth-of-type(odd)
+
+.box > img
 {
-	background-color:#1a1a1a;
+    height: 100%;
+    width: 100%;
 }
-main > section:nth-of-type(even)
+
+.box > p
 {
-	background-color:#ffffff;
+    margin: 0.75rem 0.75rem 0.75rem 0.75rem;
 }
-section
+
+
+/*Transitions*/
+.transition-1
 {
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:space-around;
-	align-self:center;
+    background-image: linear-gradient(to top left, rgba(255,255,255,0.85), rgba(255,255,255,0.85) 49.5%, transparent 50%, transparent 100%), url(../images/greenDragon.png),  linear-gradient(to top left, #ffffff, #ffffff 49.5%, #1a1a1a 50%, #1a1a1a 100%);
+    background-size: auto, contain, auto;
+    background-position: center, right, center;
+    background-attachment: scroll, fixed, scroll;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    height: 20vh;
+    width: 100vw;
 }
-/*Footer Code*/
-footer 
+
+.transition-2
 {
-	background-color:#1a1a1a;
-	color:#ffffff;
-	padding:10px;
-	text-align:center;
-	padding-top:100px;
-	font-size:0.8em;
+    background-image: linear-gradient(to bottom right, rgba(255,255,255,0.85), rgba(255,255,255,0.85) 49.5%, #1a1a1a 50%, #1a1a1a 100%), url(../images/greenDragon.png),  linear-gradient(to bottom right, #ffffff, #ffffff 49.5%, #1a1a1a 50%, #1a1a1a 100%);
+    background-size: auto, contain, auto;
+    background-position: center, right, center;
+    background-attachment: scroll, fixed, scroll;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    height: 20vh;
+    width: 100vw;
+    align-self: flex-end;
 }
-/*flexbox*/
-.nowrap
+
+/*Footer*/
+footer
 {
-	flex-wrap:nowrap;
+    font-family: 'Open Sans';
+    font-size: 0.9rem;
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;   
+    background-color: #1a1a1a;
+    height: 50px;
+    width: 100vw;
+}
+
+footer > a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/*Flexbox Layout*/
+.flex-container
+{
+    display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    
 }
