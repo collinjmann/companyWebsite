@@ -17,7 +17,7 @@ function init() {
     width = window.innerWidth;
     
     nav.addEventListener("focus", function() {
-        if(width < 1050 && hasFocus == false)
+        if(width < 950 && hasFocus == false)
         {
             body.style.marginLeft = "200px";
             nav.style.marginLeft = "200px";
@@ -38,14 +38,14 @@ function init() {
     });
     
     dropdownContainer.addEventListener('focus', function() {
-        if(width < 1050 && dropdownHasFocus == false) {
+        if(width < 950 && dropdownHasFocus == false) {
                 dropdown.style.height = '125px';
                 dropdownContainer.getElementsByTagName('span')[0].style.visibility = "visible";
                 dropdownContainer.getElementsByTagName('span')[1].style.visibility = "hidden";
                 dropdownHasFocus = true;
                 document.activeElement.blur();
             }
-            else if(width < 1050 && dropdownHasFocus == true)
+            else if(width < 950 && dropdownHasFocus == true)
             {
                 dropdown.style.height = '0px';
                 dropdownContainer.getElementsByTagName('span')[1].style.visibility = "visible";
@@ -60,7 +60,7 @@ function init() {
         nav.style.marginLeft = "0px";
         document.getElementsByTagName("figure")[0].style.marginLeft = "0px";
         dropdown.style.height = '0px';
-        if(width < 1050)
+        if(width < 950)
             document.getElementsByTagName('ul')[0].style.width = "0px";
         else if(width >= 950)
             document.getElementsByTagName('ul')[0].style.width = "95%";

@@ -72,6 +72,16 @@ h1
     font-size: 2.75rem;
     font-weight: 200;
     text-align: center;
+    width: 100%;
+}
+
+h2
+{
+    font-family: 'Raleway';
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-align: center;
+    width: 100%;
 }
 
 .box-container
@@ -97,7 +107,7 @@ h1
 {
     .main-article
     {
-        min-width: 200px;
+        min-width: 200px !important;
         width: 80%;
     }
     
