@@ -12,9 +12,15 @@
         <script src = "javascript/main.js"></script>
         <title>Vendicant Games | Contact</title>
 		<style>
+			body
+			{
+				background-image:none;
+				background-color:#1a1a1a;
+			}
 			section
 			{
 				flex-wrap:wrap;
+				min-height:70vh !important;
 			}
             form
             {
@@ -33,9 +39,24 @@
 			}
 			fieldset
 			{
-				padding:30px;
+				padding:15px;
 			}
-            
+			fieldset span
+			{
+				display:block;
+				margin-top:15px;
+			}
+			fieldset span:first-of-type
+			{
+				margin-top:0px;
+			}
+			textarea
+			{
+				font-family: 'Open Sans';
+				width:15vw;
+				min-width:250px;
+				height:15vh;
+			}
 		</style>
     </head>
     
@@ -54,8 +75,6 @@
                     <div></div>
                     <ul id = "dropdown">
                         <li><a href = "company.html">Company</a></li>
-                        <li><a href = "webDevelopers.html">Web Developers</a></li>
-                        <li><a href = "gameDevelopers.html">Game Developers</a></li>
                         <li><a href = "employment.html">Employment</a></li>
                         <li><a href = "contact.html">Contact Us</a></li>
                     </ul>
@@ -76,14 +95,17 @@
 					<form>
 						<fieldset>
 							<legend>User Information</legend>
-							Email: <input type="textbox" name="email" placeholder="someone@example.com" /><br /><br />
-							First Name: <input type="textbox" name="fname" placeholder="First Name Here" /><br /><br />
-							Last Name: <input type="textbox" name="lname" placeholder="Last Name Here" /><br />
+							<span>Email: </span>
+							<input type="textbox" name="email" placeholder="someone@example.com" />
+							<span>First Name: </span> 
+							<input type="textbox" name="fname" placeholder="First Name Here" />
+							<span>Last Name: </span>
+							<input type="textbox" name="lname" placeholder="Last Name Here" />
 						</fieldset>
 						
 						<fieldset>
 							<legend>User Message</legend>
-							<textarea cols="40" rows="20" name="message">Type message here.</textarea>
+							<textarea name="message">Type message here.</textarea>
 						</fieldset>
 						
 						<input type="submit" />
