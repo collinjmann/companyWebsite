@@ -88,12 +88,12 @@ nav > ul > li > ul
     left: calc(50% - 70px - 0.5rem);
     margin: 0rem 0rem 0rem 0rem;
     padding: 0rem 0.5rem 0rem 0.5rem;
-    width: 130px;
+    width: 140px;
 }
 
 nav > ul > li:hover > ul
 {
-    height: 110px !important;
+    height: 125px !important;
     /*border-left: 1px solid #00cc00;
     border-right: 1px solid #00cc00;
     border-bottom: 1px solid #00cc00;*/
