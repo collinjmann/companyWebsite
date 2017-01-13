@@ -25,7 +25,7 @@
 				width:100%;
 				margin:0px;
 			}
-			form > input:last-of-type
+			form > input
 			{
 				width:100%;
 				padding:15px;
@@ -76,18 +76,18 @@
 					<form>
 						<fieldset>
 							<legend>User Information</legend>
-							Email: <input type="textbox" name="email" /><br /><br />
-							First Name: <input type="textbox" name="fname" /><br /><br />
-							Last Name: <input type="textbox" name="lname" /><br />
+							Email: <input type="textbox" name="email" placeholder="someone@example.com" /><br /><br />
+							First Name: <input type="textbox" name="fname" placeholder="First Name Here" /><br /><br />
+							Last Name: <input type="textbox" name="lname" placeholder="Last Name Here" /><br />
 						</fieldset>
 						
 						<fieldset>
 							<legend>User Message</legend>
-							<textarea cols="40" rows="20" name="message">
-							</textarea>
+							<textarea cols="40" rows="20" name="message">Type message here.</textarea>
 						</fieldset>
 						
 						<input type="submit" />
+						<input type="reset" />
 					</form>
 				</article>
             </section>
@@ -96,7 +96,5 @@
         <footer>
         &copy; Copyright 2017 Vendicant Games | Contact Webmaster: <a href = "">someone@example.com</a>
         </footer>
-    
     </body>
-    
 </html>
