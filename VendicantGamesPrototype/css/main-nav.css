@@ -57,16 +57,31 @@ nav > ul > li > a
 
 nav > ul > li > div
 {
+    width: 140px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 70px);
+}
+
+nav > ul > li > div > div
+{
     height: 40px;
     width: 40px;
     background-color: #1a1a1a;
     transform: rotate(45deg);
     display: none;
     position: absolute;
+    right: calc(50% - 20px);
     top: 30px;
 }
 
 nav > ul > li:hover > div
+{
+    display: block;
+}
+
+nav > ul > li:hover > div > div
 {
     display: block;
 }
