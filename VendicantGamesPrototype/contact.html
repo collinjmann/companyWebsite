@@ -10,6 +10,7 @@
         <link rel = "stylesheet" media = "screen and (min-width: 950px)" type = "text/css"  href = "css/main-nav.css" />
         <link rel = "stylesheet" media = "screen and (max-width: 949px)" type = "text/css"  href = "css/mobile-nav.css" />
         <script src = "javascript/main.js"></script>
+        <? include('php/mail.php')?>
         <title>Vendicant Games | Contact</title>
 		<style>
 			body
@@ -92,7 +93,7 @@
                 <h1>Contact</h1>
 				
 				<article>
-					<form>
+					<form  action = "php/mail.php" method = "get" >
 						<fieldset>
 							<legend>User Information</legend>
 							<span>Email: </span>
@@ -108,7 +109,7 @@
 							<textarea name="message">Type message here.</textarea>
 						</fieldset>
 						
-						<input type="submit" name="submit" />
+						<input type="submit" name="submit"/>
 						<input type="reset" />
 					</form>
 				</article>
