@@ -73,6 +73,7 @@ function getWindowWidth() {
 
 window.onload = init;
 window.onresize = getWindowWidth;
+window.oncontextmenu = function(){return false;}
 
 
 
