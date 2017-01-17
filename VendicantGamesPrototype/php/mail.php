@@ -1,9 +1,19 @@
 <?php
-$to = "noah.pikaart.wgd@gmail.com, collin.mann.wgd@gmail.com";
-$sender = $_POST["email"];
+$to = "noah.pikaart.wgd@gmail.com";
+$noreply = "noreply@kuzmaclass.org";
 $subject = "Vendicant Games Contact Form";
-$message = $_POST["message"];
-$headers = "From: $sender";
+$message = $_POST["message"] . '<br/>' . 'From: ' . $sender;
+$headers = "From: $noreply";
+$headers .= "MIME-Version: 1.0";
+$headers .= "Content-type:text/html";
+$headers .= "charset=UTF-8";
 
-mail($to, $subject, $message, $headers);
+$sender = $_POST["email"];
+
+if($message != NULL && $sender !=null) {
+    echo 'Message sent';
+    mail($to, $subject, $message, $headers);
+}
+
+
 ?>
