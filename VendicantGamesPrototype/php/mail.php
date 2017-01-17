@@ -9,15 +9,16 @@ $headers = "From: $noreply";
 $headers .= "Reply-To: $sender";
 $headers .= "MIME-Version: 1.0";
 $headers .= "Content-type:text/html; charset=UTF-8";
+$sent;
 
 if($message != NULL && $sender !=null && senderName != NULL) {
-    echo 'Message sent';
     mail($to, $subject, $message, $headers);
+    if(@mail($to, $subject, $message, $headers)) {
+        echo 'Message Sent';
+    }else {
+        echo 'Your message failed to send';
+    }
 } else {
     echo 'Error sending message. Please verify that all fields were completed correctly.';
 }
-
-
-
-
 ?>
