@@ -12,8 +12,8 @@ $subject = "Vendicant Games Contact Form";
 #Message with special chars removed
 $message = preg_replace('/[^A-Za-z0-9\-]/', '', $_POST["message"]) . "\r\n \r\n" . "From: " . $sender;
 #Headers
-$headers = "From: $noreply";
-$headers .= "Reply-To: $sender";
+$headers = "From:" . $noreply;
+$headers .= "Reply-To:" . $sender;
 $headers .= "MIME-Version: 1.0";
 $headers .= "Content-type:text/html; charset=UTF-8";
 
