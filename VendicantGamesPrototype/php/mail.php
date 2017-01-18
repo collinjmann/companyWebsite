@@ -17,8 +17,9 @@ $headers .= "Reply-To:" . $sender;
 $headers .= "MIME-Version: 1.0";
 $headers .= "Content-type:text/html; charset=UTF-8";
 
-#Verify required fields are not null
-if($message != NULL && $sender !=null && senderName != NULL) {
+
+#Verify required fields are not null, and email address is valid
+if(filter_var($sender, FILTER_VALIDATE_EMAIL) && $senderName!=NULL && $message != NULL) {
     #If Message sent
     if(@mail($to, $subject, $message, $headers)) {
         echo 'Message Sent';
