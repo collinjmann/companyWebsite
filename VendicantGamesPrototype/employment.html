@@ -10,6 +10,31 @@
         <link rel = "stylesheet" media = "screen and (min-width: 950px)" type = "text/css"  href = "css/main-nav.css" />
         <link rel = "stylesheet" media = "screen and (max-width: 949px)" type = "text/css"  href = "css/mobile-nav.css" />
         <script src = "javascript/main.js"></script>
+        <script>
+            var wd;
+            var gd;
+            function init() {
+                var wd = document.getElementById("webDeveloper");
+                var gd = document.getElementById("gameDeveloper");
+                wd.addEventListener("focus", function() {
+                    wd.getElementsByTagName("div")[0].style.display = "block";
+                });
+                
+                wd.addEventListener("blur", function() {
+                    wd.getElementsByTagName("div")[0].style.display = "none";
+                });
+                
+                gd.addEventListener("focus", function() {
+                    wd.getElementsByTagName("div")[0].style.display = "block";
+                });
+                
+                gd.addEventListener("blur", function() {
+                    wd.getElementsByTagName("div")[0].style.display = "none";
+                });
+            }
+            window.onload = init;
+            
+        </script>
         <title>Vendicant Games | Employment</title>
 		<style>
 			body
@@ -25,10 +50,28 @@
 			{
 				min-height: 90vh;
 			}
+            li#webDeveloper > div, li#gameDeveloper > div
+            {
+                display: none;
+                height: 70vh !important;
+                width: 80vw !important;
+                background-color: #1a1a1a;
+                border: 2px solid #ffffff;
+                color: #000000;
+                position: fixed;
+                top: 20vh;
+                left: 10vw;
+                /*border-top-left-radius: 10px !important;
+                border-bottom-right-radius: 10px !important;
+                border-top-right-radius: 10px !important;
+                border-bottom-left-radius: 10px !important;*/
+                z-index: 200;
+            }
 		</style>
     </head>
     
     <body class = "flex-container">
+        
         <nav tabindex = "1">
             <figure>
                 <div></div>
@@ -78,10 +121,12 @@
 						dui in bibendum ultricies, lorem augue commodo risus
 					</p>
 					<ul>
-						<li>Lorum Ipsum</li>
-						<li>Lorum Ipsum</li>
-						<li>Lorum Ipsum</li>
-						<li>Lorum Ipsum</li>
+						<li id = "webDeveloper" tabindex = "3">Web Developer
+                            <div></div>
+                        </li>
+						<li id = "gameDeveloper" tabindex = "4">Game Developer
+                            <div></div>
+                        </li>
 					</ul>
 				</article>
             </section>
