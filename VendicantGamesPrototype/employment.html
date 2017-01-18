@@ -25,6 +25,23 @@
 			{
 				min-height: 90vh;
 			}
+			.main-article
+			{
+				min-width:800px;
+			}
+			ul
+			{
+				list-style:none;
+			}
+			ul li:focus
+			{
+				outline:none;
+			}
+			span
+			{
+				margin-right:15px;
+				display:none;
+			}
 		</style>
     </head>
     
@@ -61,17 +78,6 @@
                 <h1>Employment</h1>
 				
 				<article class="main-article">
-					<h3>How to apply</h3>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, 
-						a ultrices tortor. Nullam hendrerit,
-						dui in bibendum ultricies, lorem augue commodo risus
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, 
-						a ultrices tortor. Nullam hendrerit,
-						dui in bibendum ultricies, lorem augue commodo risus
-					</p>
-				</article>
-				<article class="main-article">
 					<h3>Jobs avalible</h3>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, 
@@ -80,10 +86,54 @@
 					</p>
 					<ul>
 						<li id = "webDeveloper" tabindex = "3">
-							+ Web Developer    
+							<span>+</span><span>-</span>Web Developer
+							
+							<article>
+								<h2>Web Developer</h2>
+								
+								<p>
+									We are seeking a front-end web developer who will be a member of our web team which is responsible for creating, 
+									editing, updating, improving, and maintaining quality web content that is accessible through a variety of viewports. 
+									Working knowledge of the web stack, HTML5, CSS3, Javascript (Javascript libraries), and Ajax are essential, 
+									along with aptitude for backend database integration using PHP and SQL. Ability to build relationships quickly 
+									and understand the dynamics of a quick-paced environment is important.
+								</p>
+								
+								<h2>Roles and Responsibilities</h2>
+								
+								<ol>
+									<li>Work closely with Web Team to meet client (internal and external) expectations and deliver exceptional code and consulting advice.</li>
+									<li>Participate in peer code reviews and project meetings.</li>
+									<li>Understand client requirements and translate them into technical requirements.</li>
+									<li>Resolve day-to-day challenges associated with a project.</li>
+									<li>Provide to project manager time and technical requirements for a project.</li>
+									<li>Work with team to identify risks with a project.</li>
+									<li>Contribute to the problem-solving process for project risks and issues.</li>
+									<li>Utilize all technical resources, both internally and externally, for ensuring technical solutions that represent best practices for modern browsers and various viewports.</li>
+									<li>Convert requirements into solutions by developing code that follows internal standards and best practices.</li>
+								</ol>
+								
+								<h2>Desirable Technical and Functional Skills</h2>
+								
+								<ol>
+									<li>Working knowledge of the trifecta: HTML5, CSS3, and Javascript.</li>
+									<li>Familiarity with Javascript libraries (Jquery) and Ajax.</li>
+									<li>Familiarity of backend integration using PHP and SQL.</li>
+									<li>Knowledge of W#C Accessibility Guidelines and compliance with federal accessibility laws.</li>
+									<li>Ability to work well with others, inspiring creativity and constructive conflict resolution.</li>
+									<li>Strong time management and organizational skills.</li>
+									<li>Ability to work on multiple projects under strict deadlines.</li>
+									<li>Problem-solving skills that are creative and efficient.</li>
+									<li>Contributes to a productive, inspiring, and fun work environment.</li>
+								</ol>
+								
+								<h2>To Apply</h2>
+								
+								<p>Please send an resume and colver letter to someone@example.com</p>
+							</article>
                         </li>
 						<li id = "gameDeveloper" tabindex = "4">
-							+ Game Developer
+							<span>+</span><span>-</span>Game Developer
                         </li>
 					</ul>
 				</article>
@@ -93,7 +143,10 @@
         <footer>
         &copy; Copyright 2017 Vendicant Games | Contact Webmaster: <a href = "">someone@example.com</a>
         </footer>
-    
+		
+		<script>
+			
+		</script>
     </body>
     
 </html>
