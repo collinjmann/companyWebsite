@@ -1,6 +1,6 @@
 <?php
 #Messages sent to
-$to = "noah.pikaart.wgd@gmail.com";
+$to = "noah.pikaart.wgd@gmail.com, collin.mann.wgd@gmail.com";
 #Messages sent from
 $noreply = "noreply@kuzmaclass.org";
 #Sender email with special chars removed, excluding . and @
