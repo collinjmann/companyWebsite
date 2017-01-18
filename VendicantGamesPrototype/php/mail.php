@@ -6,11 +6,11 @@ $noreply = "noreply@kuzmaclass.org";
 #Sender email with special chars removed, excluding . and @
 $sender = preg_replace('/[^A-Za-z0-9.@\-]/', '', $_POST["email"]);
 #Sender name with special chars removed
-$senderName = preg_replace('/[^A-Za-z0-9\-]/', '', $_POST["fname"] . $_POST["lname"]);
+$senderName = preg_replace('/[^A-Za-z0-9\-]/', ' ', $_POST["fname"] . $_POST["lname"]);
 #Email Subject
 $subject = "Vendicant Games Contact Form";
 #Message with special chars removed
-$message = preg_replace('/[^A-Za-z0-9\-]/', '', $_POST["message"]) . "\r\n \r\n" . "From: " . $sender;
+$message = preg_replace('/[^A-Za-z0-9\-]/', ' ', $_POST["message"]) . "\r\n \r\n" . "From: " . $sender;
 #Headers
 $headers = "From:" . $noreply;
 $headers .= "Reply-To:" . $sender;
