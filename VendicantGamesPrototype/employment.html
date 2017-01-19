@@ -17,10 +17,6 @@
 				background-image:none;
 				background-color:#1a1a1a;
 			}
-			section
-			{
-				min-height:70vh !important;
-			}
 			.section-grey
 			{
 				min-height: 90vh;
@@ -37,7 +33,7 @@
 			{
 				outline:none;
 			}
-			span
+			span.open
 			{
 				margin-right:15px;
 				display:none;
@@ -86,7 +82,7 @@
 					</p>
 					<ul>
 						<li id = "webDeveloper" tabindex = "3">
-							<span>+</span><span>-</span>Web Developer
+							<span class="open">-&nbsp;&nbsp;Web Developer</span>
 							
 							<article class="description">
 								<h2>Web Developer</h2>
@@ -133,7 +129,7 @@
 							</article>
                         </li>
 						<li id = "gameDeveloper" tabindex = "4">
-							<span>+</span><span>-</span>Game Developer
+							<span>-&nbsp;&nbsp;Game Developer</span>
                         </li>
 					</ul>
 				</article>
@@ -145,8 +141,25 @@
         </footer>
 		
 		<script>
-			var span = document.getElementsByTagName("span");
-			var article = document.getElementsByClassName("")
+			var span = document.getElementsByClassName("open");
+			var article = document.getElementsByClassName("description");
+			
+			for (var index = 0; index < span.length; index++)
+			{
+				span[index].style.display = "block";
+				article[index].style.display = "none";
+				span[index].onclick = function()
+				{
+					if (this.innerHTML[0] == '-')
+					{
+						
+					}
+					else
+					{
+					
+					}
+				}
+			}
 		</script>
     </body>
     
