@@ -10,12 +10,78 @@
         <link rel = "stylesheet" media = "screen and (min-width: 950px)" type = "text/css"  href = "css/main-nav.css" />
         <link rel = "stylesheet" media = "screen and (max-width: 949px)" type = "text/css"  href = "css/mobile-nav.css" />
         <script src = "javascript/main.js"></script>
+        <script>
+            var previousReleases;
+            var prDropdown;
+            var dropdownArrow;
+            var isFocused = false;
+            function init() {
+                prDropdown = document.getElementById("prDropdown");
+                previousReleases = document.getElementById("previousReleases");
+                dropdownArrow = document.getElementsByClassName("dropdownArrow")[0];
+                
+                
+                prDropdown.addEventListener("focus", function() {
+                    if(isFocused == false) {
+                        previousReleases.style.height = "auto";
+                        isFocused = true;
+                        document.activeElement.blur();
+                        dropdownArrow.style.transform = "rotate(135deg)";
+                    } else if(isFocused == true) {
+                        previousReleases.style.height = "0px";
+                        isFocused = false;
+                        document.activeElement.blur();
+                        dropdownArrow.style.transform = "rotate(-45deg)";
+                    }
+                    
+                });
+                
+    
+            }
+            
+            window.onload = init;
+        </script>
         <title>Vendicant Games | Games</title>
 		<style>
+            .dropdownArrow
+            {
+                height: 40px;
+				width: 40px;
+				margin: auto calc(50% - 20px);
+				border-left: 2px solid #ffffff;
+				border-bottom: 2px solid #ffffff;
+				/*position: absolute;*/
+				left: calc(50% - 20px);
+				top: 70%;
+                transition: transform 400ms ease-in-out 0ms;
+				transform: rotate(-45deg);
+            }
+               
+            
 			.section-grey
 			{
 				min-height: 90vh;
 			}
+            
+            #newReleases
+            {
+                justify-content: space-around;
+                
+            }
+            
+            #previousReleases
+            {
+                justify-content: space-around;
+                height: 0px;
+                overflow: hidden;
+                transform: height 400ms ease-in-out 0ms;
+            }
+            
+            #prDropdown
+            {
+                outline: none;
+                margin: 3rem 3rem 3rem 3rem;
+            }
 		</style>
     </head>
     
@@ -49,149 +115,194 @@
             <!--First Section-->
             <section  class = "flex-container section-grey">
                 <h1>Our Games</h1>
-                <section id = "newReleasesmas" class = "flex-container section-grey">
-                    <section class = "main-article">
-                        <h1>Shutia</h1>
-                        <article>
-                            The human astronaut crashes into the planet, Esukarta, due to a mistake he made. His ship blows up into pieces and the pieces fly off to different 
-							places on Esukarta. He goes off on his adventure searching for his parts. He soon realizes that he is not alone and that there is Aliens on the planet, 
-							known as the Shutai.
-                            <div class = 'button'>Buy Now</div>
-                        </article>
-                    </section>
+                <h2>New Releases</h2>
+                <section class = "flex-container section-grey">
+                    <section id = "newReleases" class = "flex-container">
+                        <section class = "main-article">
+                            <h1>Shutia</h1>
+                            <article>
+                                The human astronaut crashes into the planet, Esukarta, due to a mistake he made. His ship blows up into pieces and the pieces fly off to different 
+                                places on Esukarta. He goes off on his adventure searching for his parts. He soon realizes that he is not alone and that there is Aliens on the planet, 
+                                known as the Shutai.
+                                <div class = 'button'>Buy Now</div>
+                            </article>
+                        </section>
 
-                    <section class = "flex-container box-container">
-                        <article class = "box">
-                            <img src = "images/fireGlider.png" alt = "Fire Glider" />
-                        </article>
+                        <section class = "flex-container box-container">
+                            <article class = "box">
+                                <img src = "images/fireGlider.png" alt = "Fire Glider" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/sandWorm.png" alt = "Sand Worm" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/sandWorm.png" alt = "Sand Worm" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/voltWasp.png" alt = "Volt Wasp" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/voltWasp.png" alt = "Volt Wasp" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/heatDetector.png" alt = "Heat Detector" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/heatDetector.png" alt = "Heat Detector" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/flareBeetle.png" alt = "Flare Beetle" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/flareBeetle.png" alt = "Flare Beetle" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/character.png" alt = "Female Character" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/character.png" alt = "Female Character" />
+                            </article>
 
-                    </section>
+                        </section>
 
-                    <section class = "main-article">
-                        <h1>Lorem Ipsum</h1>
+                        <section class = "main-article">
+                            <h1>Lorem Ipsum</h1>
 
-                        <article>
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, a ultrices tortor. Nullam hendrerit, dui in bibendum ultricies, lorem augue commodo risus, non varius ex dui ut odio. Etiam ut scelerisque magna, ut vulputate elit. Duis fermentum cursus elit, bibendum mattis neque vulputate nec. Praesent iaculis, purus non blandit hendrerit, nisl diam feugiat lacus, bibendum ornare lorem odio et turpis. Cras in orci ornare, mollis tortor eu, pulvinar arcu. 
-                             <div class = 'button'>Buy Now</div>
-                        </article>
-                    </section>
+                            <article>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, a ultrices tortor. Nullam hendrerit, dui in bibendum ultricies, lorem augue commodo risus, non varius ex dui ut odio. Etiam ut scelerisque magna, ut vulputate elit. Duis fermentum cursus elit, bibendum mattis neque vulputate nec. Praesent iaculis, purus non blandit hendrerit, nisl diam feugiat lacus, bibendum ornare lorem odio et turpis. Cras in orci ornare, mollis tortor eu, pulvinar arcu. 
+                                 <div class = 'button'>Buy Now</div>
+                            </article>
+                        </section>
 
-                    <section class = "flex-container box-container">
-                        <article class = "box">
-                            <img src = "images/bacteriaCluster.png" alt = "Bacteria Cluster" />
-                        </article>
+                        <section class = "flex-container box-container">
+                            <article class = "box">
+                                <img src = "images/bacteriaCluster.png" alt = "Bacteria Cluster" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/bacteriaMites.png" alt = "Bacteria Mites" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/bacteriaMites.png" alt = "Bacteria Mites" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/fireGlider.png" alt = "Fire Glider" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/fireGlider.png" alt = "Fire Glider" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/sandWorm.png" alt = "Sand Worm" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/sandWorm.png" alt = "Sand Worm" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/voltWasp.png" alt = "Volt Wasp" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/voltWasp.png" alt = "Volt Wasp" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/heatDetector.png" alt = "Heat Detector" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/heatDetector.png" alt = "Heat Detector" />
+                            </article>
 
+                        </section>
                     </section>
                     
-                     <section class = "main-article">
-                        <h1>Lorem Ipsum</h1>
-                        <article>
-                            Fate of the Future is a top down game designed for PC and Xbox. It is an RPG style game that we hope many people will get to enjoy! In the game there are multiple enemy types, as well as multiple weapon types. The game has has multiple areas all centered around a specific environment style. There are four main themes: Snow, Forest, Suburb/City/ and volcano.
-                             <div class = 'button'>Buy Now</div>
-                        </article>
-                    </section>
+                    <div tabindex = "5" id = "prDropdown">
+                        <h2>Previous Releases</h2>
+                        <div class = "dropdownArrow"></div>
+                    </div>
+                    <section id = "previousReleases" class = "flex-container">
+                        <section class = "main-article">
+                            <h1>Fate of the Future</h1>
+                            <article>
+                                Fate of the Future is a top down game designed for PC and Xbox. It is an RPG style game that we hope many people will get to enjoy! In the game there are multiple enemy types, as well as multiple weapon types. The game has has multiple areas all centered around a specific environment style. There are four main themes: Snow, Forest, Suburb/City/ and volcano.
+                                 <div class = 'button'>Buy Now</div>
+                            </article>
+                        </section>
 
-                    <section class = "flex-container box-container">
-                        <article class = "box">
-                            <img src = "images/fireGlider.png" alt = "Fire Glider" />
-                        </article>
+                        <section class = "flex-container box-container">
+                            <article class = "box">
+                                <img src = "images/fireGlider.png" alt = "Fire Glider" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/sandWorm.png" alt = "Sand Worm" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/sandWorm.png" alt = "Sand Worm" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/voltWasp.png" alt = "Volt Wasp" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/voltWasp.png" alt = "Volt Wasp" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/heatDetector.png" alt = "Heat Detector" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/heatDetector.png" alt = "Heat Detector" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/flareBeetle.png" alt = "Flare Beetle" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/flareBeetle.png" alt = "Flare Beetle" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/character.png" alt = "Female Character" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/character.png" alt = "Female Character" />
+                            </article>
 
-                    </section>
+                        </section>
 
-                    <section class = "main-article">
-                        <h1>Lorem Ipsum</h1>
+                        <section class = "main-article">
+                            <h1>Going to Die</h1>
 
-                        <article>
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, a ultrices tortor. Nullam hendrerit, dui in bibendum ultricies, lorem augue commodo risus, non varius ex dui ut odio. Etiam ut scelerisque magna, ut vulputate elit. Duis fermentum cursus elit, bibendum mattis neque vulputate nec. Praesent iaculis, purus non blandit hendrerit, nisl diam feugiat lacus, bibendum ornare lorem odio et turpis. Cras in orci ornare, mollis tortor eu, pulvinar arcu. 
-                             <div class = 'button'>Buy Now</div>
-                        </article>
-                    </section>
+                            <article>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, a ultrices tortor. Nullam hendrerit, dui in bibendum ultricies, lorem augue commodo risus, non varius ex dui ut odio. Etiam ut scelerisque magna, ut vulputate elit. Duis fermentum cursus elit, bibendum mattis neque vulputate nec. Praesent iaculis, purus non blandit hendrerit, nisl diam feugiat lacus, bibendum ornare lorem odio et turpis. Cras in orci ornare, mollis tortor eu, pulvinar arcu. 
+                                 <div class = 'button'>Buy Now</div>
+                            </article>
+                        </section>
 
-                    <section class = "flex-container box-container">
-                        <article class = "box">
-                            <img src = "images/bacteriaCluster.png" alt = "Bacteria Cluster" />
-                        </article>
+                        <section class = "flex-container box-container">
+                            <article class = "box">
+                                <img src = "images/bacteriaCluster.png" alt = "Bacteria Cluster" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/bacteriaMites.png" alt = "Bacteria Mites" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/bacteriaMites.png" alt = "Bacteria Mites" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/fireGlider.png" alt = "Fire Glider" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/fireGlider.png" alt = "Fire Glider" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/sandWorm.png" alt = "Sand Worm" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/sandWorm.png" alt = "Sand Worm" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/voltWasp.png" alt = "Volt Wasp" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/voltWasp.png" alt = "Volt Wasp" />
+                            </article>
 
-                        <article class = "box">
-                            <img src = "images/heatDetector.png" alt = "Heat Detector" />
-                        </article>
+                            <article class = "box">
+                                <img src = "images/heatDetector.png" alt = "Heat Detector" />
+                            </article>
 
+                        </section>
+
+                        <section class = "main-article">
+                            <h1>Tengu Rush</h1>
+
+                            <article>
+                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et accumsan velit, a ultrices tortor. Nullam hendrerit, dui in bibendum ultricies, lorem augue commodo risus, non varius ex dui ut odio. Etiam ut scelerisque magna, ut vulputate elit. Duis fermentum cursus elit, bibendum mattis neque vulputate nec. Praesent iaculis, purus non blandit hendrerit, nisl diam feugiat lacus, bibendum ornare lorem odio et turpis. Cras in orci ornare, mollis tortor eu, pulvinar arcu. 
+                                 <div class = 'button'>Buy Now</div>
+                            </article>
+                        </section>
+
+                        <section class = "flex-container box-container">
+                            <article class = "box">
+                                <img src = "images/bacteriaCluster.png" alt = "Bacteria Cluster" />
+                            </article>
+
+                            <article class = "box">
+                                <img src = "images/bacteriaMites.png" alt = "Bacteria Mites" />
+                            </article>
+
+                            <article class = "box">
+                                <img src = "images/fireGlider.png" alt = "Fire Glider" />
+                            </article>
+
+                            <article class = "box">
+                                <img src = "images/sandWorm.png" alt = "Sand Worm" />
+                            </article>
+
+                            <article class = "box">
+                                <img src = "images/voltWasp.png" alt = "Volt Wasp" />
+                            </article>
+
+                            <article class = "box">
+                                <img src = "images/heatDetector.png" alt = "Heat Detector" />
+                            </article>
+
+                        </section>
                     </section>
 
                 </section>
