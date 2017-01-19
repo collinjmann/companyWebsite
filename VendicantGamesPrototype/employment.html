@@ -19,7 +19,7 @@
 			}
 			.section-grey
 			{
-				min-height: 90vh;
+				min-height: 70vh;
 			}
 			.main-article
 			{
@@ -29,6 +29,10 @@
 			{
 				list-style:none;
 			}
+			ol, ul
+			{
+				padding:0px;
+			}
 			ul li:focus
 			{
 				outline:none;
@@ -37,6 +41,15 @@
 			{
 				margin-right:15px;
 				display:none;
+			}
+			.description
+			{
+				margin-bottom:50px;
+				margin-top:50px;
+			}
+			.description p:last-of-type
+			{
+				text-align:center;
 			}
 		</style>
     </head>
@@ -81,8 +94,8 @@
 						dui in bibendum ultricies, lorem augue commodo risus
 					</p>
 					<ul>
-						<li id = "webDeveloper" tabindex = "3">
-							<span class="open">-&nbsp;&nbsp;Web Developer</span>
+						<li tabindex = "3">
+							<span class="open">+&nbsp;&nbsp;Web Developer</span>
 							
 							<article class="description">
 								<h2>Web Developer</h2>
@@ -128,11 +141,55 @@
 								<p>Please send an resume and colver letter to someone@example.com</p>
 							</article>
                         </li>
-						<li id = "gameDeveloper" tabindex = "4">
-							<span>-&nbsp;&nbsp;Game Developer</span>
+						<li tabindex = "4">
+							<span class="open">+&nbsp;&nbsp;Server Administrator</span>
+							
+							<article class="description">
+								<h2>Server Administrator</h2>
+								
+								<p>
+									We are seeking a server administrator who will be a member of our Networking Team. 
+									Working knowledge of Microsoft Server 2008 and 2012, with specific emphasis on Active Directory management is very important.
+									Must possess a customer service attitude, work well under pressure, and be a self-driven learner.
+									Productive collaboration with team members is essential for providing responsive, quality solutions to end user problems.
+								</p>
+								
+								<h2>Roles and Responsibilities</h2>
+								
+								<ol>
+									<li>Manage day-to-day administration of Active Directory including: Creating, modifying, removing WIndows security groups, file shares, folders, and file permissions.</li>
+									<li>Manage the day-to-day enterprise messaging environments including: creating, modifying, or deleting of: mailboxes, distribution lists, mail contacts, and transport rules.</li>
+									<li>Perform troubleshooting as required.</li>
+									<li>Ensure high availability and acceptable levels of performance of mission critical host computer resources.</li>
+									<li>Execute procedures to maintain security and protect systems from unauthorized use, acts of nature, and user abuse.</li>
+									<li>Execute procedures for the installation and management of the host computer operating systems, disk arrays, ethernet switches, tape libraries, and other components.</li>
+									<li>Review, test, and deploy security patches to the information systems environment.</li>
+									<li>Contribute to team efforts by establishing and maintaining professional working relationship with peers and end users.</li>
+									<li>Inform appropriate members of the Network Team regarding new issues.</li>
+								</ol>
+								
+								<h2>Desirable Technical and Functional Skills</h2>
+								
+								<ol>
+									<li>Proficient knowledge of desktop OS, MS Server 2008 and 2012, HyperV, Active Directory, and MS Exchange.</li>
+									<li>Skill in using PowerShell for administration tasks.</li>
+									<li>Understand and manage firewalls.</li>
+									<li>Ability to configure print servers and push out via Group Policy.</li>
+									<li>Working knowledge of DHCP/DNS management and configuration.</li>
+									<li>Ability to install software and develop images for distribution according to procedures.</li>
+									<li>Ability to document, track, and monitor all problems, bringing them to timely resolution with a quality outcome.</li>
+									<li>Possesses a servant-oriented attitude, including patience and resolve to meet customer demands.</li>
+								</ol>
+								
+								<h2>To Apply</h2>
+								
+								<p>Please send an resume and colver letter to someone@example.com</p>
+							</article>
                         </li>
 					</ul>
 				</article>
+				
+
             </section>
         </main>
         
@@ -143,20 +200,27 @@
 		<script>
 			var span = document.getElementsByClassName("open");
 			var article = document.getElementsByClassName("description");
+			var i = 0;
 			
 			for (var index = 0; index < span.length; index++)
 			{
 				span[index].style.display = "block";
+				span[index].id = String(index);
 				article[index].style.display = "none";
+				
 				span[index].onclick = function()
 				{
-					if (this.innerHTML[0] == '-')
+					if (this.innerHTML[0] == '+')
 					{
-						
+						article[Number(this.id)].style.display = "block";
+						this.innerHTML = this.innerHTML.slice(1);
+						this.innerHTML = "-" + this.innerHTML;
 					}
 					else
 					{
-					
+						article[Number(this.id)].style.display = "none";
+						this.innerHTML = this.innerHTML.slice(1);
+						this.innerHTML = "+" + this.innerHTML;
 					}
 				}
 			}
