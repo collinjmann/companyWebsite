@@ -10,38 +10,6 @@
         <link rel = "stylesheet" media = "screen and (min-width: 950px)" type = "text/css"  href = "css/main-nav.css" />
         <link rel = "stylesheet" media = "screen and (max-width: 949px)" type = "text/css"  href = "css/mobile-nav.css" />
         <script src = "javascript/main.js"></script>
-        <script>
-            var previousReleases;
-            var prDropdown;
-            var dropdownArrow;
-            var isFocused = false;
-            function init() {
-                prDropdown = document.getElementById("prDropdown");
-                previousReleases = document.getElementById("previousReleases");
-                dropdownArrow = document.getElementsByClassName("dropdownArrow")[0];
-                previousReleases.style.height = "0px";
-                
-                
-                prDropdown.addEventListener("focus", function() {
-                    if(isFocused == false) {
-                        previousReleases.style.height = "auto";
-                        isFocused = true;
-                        document.activeElement.blur();
-                        dropdownArrow.style.transform = "rotate(135deg)";
-                    } else if(isFocused == true) {
-                        previousReleases.style.height = "0px";
-                        isFocused = false;
-                        document.activeElement.blur();
-                        dropdownArrow.style.transform = "rotate(-45deg)";
-                    }
-                    
-                });
-                
-    
-            }
-            
-            window.onload = init;
-        </script>
         <title>Vendicant Games | Games</title>
 		<style>
             .dropdownArrow
@@ -326,5 +294,32 @@
         <footer>
         &copy; Copyright 2017 Vendicant Games | Contact Webmaster: <a href = "">someone@example.com</a>
         </footer>
+		
+		<script>
+			var isFocused = false;
+			var prDropdown = document.getElementById("prDropdown");
+			var previousReleases = document.getElementById("previousReleases");
+			var dropdownArrow = document.getElementsByClassName("dropdownArrow")[0];
+			previousReleases.style.height = "0px";
+			
+			
+			prDropdown.onfocus = function() 
+			{
+				if (isFocused == false) 
+				{
+					previousReleases.style.height = "auto";
+					isFocused = true;
+					document.activeElement.blur();
+					dropdownArrow.style.transform = "rotate(135deg)";
+				} 
+				else if (isFocused == true) 
+				{
+					previousReleases.style.height = "0px";
+					isFocused = false;
+					document.activeElement.blur();
+					dropdownArrow.style.transform = "rotate(-45deg)";
+				}
+			};
+        </script>
     </body>
 </html>
