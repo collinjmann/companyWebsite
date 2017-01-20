@@ -46,6 +46,7 @@
 			{
 				margin-bottom:50px;
 				margin-top:50px;
+				overflow:hidden;
 			}
 			.description p:last-of-type
 			{
@@ -94,7 +95,7 @@
 						dui in bibendum ultricies, lorem augue commodo risus
 					</p>
 					<ul>
-						<li tabindex = "3">
+						<li>
 							<span class="open">+&nbsp;&nbsp;Web Developer</span>
 							
 							<article class="description">
@@ -141,7 +142,7 @@
 								<p>Please send an resume and colver letter to someone@example.com</p>
 							</article>
                         </li>
-						<li tabindex = "4">
+						<li>
 							<span class="open">+&nbsp;&nbsp;Server Administrator</span>
 							
 							<article class="description">
@@ -205,19 +206,21 @@
 			{
 				span[index].style.display = "block";
 				span[index].id = String(index);
-				article[index].style.display = "none";
+				article[index].style.height = "0px";
+				article[index].style.margin = "0px";
+				article[index].style.transition = "height 2s";
 				
 				span[index].onclick = function()
 				{
 					if (this.innerHTML[0] == '+')
 					{
-						article[Number(this.id)].style.display = "block";
+						article[Number(this.id)].style.height = "auto";
 						this.innerHTML = this.innerHTML.slice(1);
 						this.innerHTML = "-" + this.innerHTML;
 					}
 					else
 					{
-						article[Number(this.id)].style.display = "none";
+						article[Number(this.id)].style.height = "0px";
 						this.innerHTML = this.innerHTML.slice(1);
 						this.innerHTML = "+" + this.innerHTML;
 					}
